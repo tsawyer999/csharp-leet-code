@@ -8,52 +8,45 @@ public class TrapRainWater
         {
             return 0;
         }
-        
+
+        var highestIndex = -1;
+        var highestValue = 0;
         var water = 0;
-
-        for (var i = 0; i < values.Length; i++)
+        for (var index = 0; index < values.Length; index++)
         {
-            var value = values[i];
-            var leftLimit = GetLeftLimit(i, values);
-            var rightLimit = GetRightLimit(i, values);
-            var limit = leftLimit < rightLimit ? leftLimit : rightLimit;
-
-            if (limit - value > 0)
+            if (highestValue < values[index])
             {
-                water += limit - value;    
+                highestValue = values[index];
+                highestIndex = index;
+            }
+        }
+
+        var leftLimit = 0;
+        for (var index = 0; index < highestIndex; index++)
+        {
+            if (leftLimit < values[index])
+            {
+                leftLimit = values[index];
+            }
+            else
+            {
+                water += leftLimit - values[index];
+            }
+        }
+
+        var rightLimit = 0;
+        for (var index = values.Length - 1; index > highestIndex; index--)
+        {
+            if (rightLimit < values[index])
+            {
+                rightLimit = values[index];
+            }
+            else
+            {
+                water += rightLimit - values[index];
             }
         }
 
         return water;
-    }
-
-    private int GetLeftLimit(int index, int[] values)
-    {
-        var leftLimit = 0;
-        for (var i = 0; i < index; i++)
-        {
-            var value = values[i];
-            if (leftLimit < value)
-            {
-                leftLimit = value;
-            }
-        }
-
-        return leftLimit;
-    }
-
-    private int GetRightLimit(int index, int[] values)
-    {
-        var rightLimit = 0;
-        for (var i = index + 1; i < values.Length; i++)
-        {
-            var value = values[i];
-            if (rightLimit < value)
-            {
-                rightLimit = value;
-            }
-        }
-
-        return rightLimit;
     }
 }
