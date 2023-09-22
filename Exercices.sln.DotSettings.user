@@ -11,5 +11,9 @@
     &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.CalculatorTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.TrapRainWaterTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.TwoSumTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.Tests.A&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.Tests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.SumTwoStringsTests.SumTwoNumbersWithSameLength&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.SumTwoStringsTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
