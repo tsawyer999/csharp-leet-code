@@ -11,21 +11,30 @@ public class ContainerWithMostWater
 
         var area = 0;
         var limit = Math.Ceiling(values.Length / 2.0);
-        for (var leftIndex = 0; leftIndex < limit; leftIndex++)
+        var leftIndex = 0;
+        var rightIndex = values.Length - 1;
+
+        while (leftIndex != rightIndex)
         {
-            for (var rightIndex = leftIndex + 1; rightIndex < values.Length; rightIndex++)
+            var leftValue = values[leftIndex];
+            var rightValue = values[rightIndex];
+
+            var width = rightIndex - leftIndex + 1;
+            var height = Math.Min(leftValue, rightValue);
+
+            var currentArea = width * height;
+            if (currentArea > area)
             {
-                var leftValue = values[leftIndex];
-                var rightValue = values[rightIndex];
+                area = currentArea;
+            }
 
-                var width = rightIndex - leftIndex + 1;
-                var height = Math.Min(leftValue, rightValue);
-
-                var currentArea = width * height; 
-                if (currentArea > area)
-                {
-                    area = currentArea;
-                }
+            if (leftValue < rightValue)
+            {
+                leftIndex++;
+            }
+            else
+            {
+                rightIndex--;
             }
         }
 
