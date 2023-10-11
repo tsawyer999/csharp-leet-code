@@ -31,15 +31,13 @@ public class BooleanOrder
         }
 
         var result = 0;
-
-        for (var i = 0; i < _operands.Length - 1; i++)
+        var previousValue = ToBoolean(_operands[0]);
+        for (var i = 0; i < _operators.Length; i++)
         {
-            var value1 = ToBoolean(_operands[i]);
-            var value2 = ToBoolean(_operands[i + 1]);
-
+            var value = ToBoolean(_operands[i + 1]);
             var f = GetOperation(_operators[i]);
 
-            if (f(value1, value2))
+            if (f(previousValue, value))
             {
                 result++;
             }
