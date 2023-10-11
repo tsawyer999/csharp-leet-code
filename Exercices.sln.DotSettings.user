@@ -17,5 +17,6 @@
     &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.SumTwoStringsTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.ContainerWithMostWaterTests.ReturnSum&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.ContainerWithMostWaterTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.BooleanOrderTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

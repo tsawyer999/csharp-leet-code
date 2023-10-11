@@ -9,44 +9,31 @@ public class TrapRainWater
             return 0;
         }
 
-        var highestIndex = -1;
-        var highestValue = 0;
-        var water = 0;
-        for (var index = 0; index < values.Length; index++)
-        {
-            if (highestValue < values[index])
-            {
-                highestValue = values[index];
-                highestIndex = index;
-            }
-        }
+        var sum = 0;
+        var leftIndex = 0;
+        var rightIndex = values.Length - 1;
 
-        var leftLimit = 0;
-        for (var index = 0; index < highestIndex; index++)
+        var maxLeft = 0;
+        var maxRight = 0;
+         
+        while (leftIndex != rightIndex)
         {
-            if (leftLimit < values[index])
+            var leftValue = values[leftIndex];
+            var rightValue = values[rightIndex];
+            
+            var limit = Math.Min(leftValue, rightValue);
+            sum = 0; 
+
+            if (leftValue < rightValue)
             {
-                leftLimit = values[index];
+                leftIndex++;
             }
             else
             {
-                water += leftLimit - values[index];
+                rightIndex--;
             }
         }
 
-        var rightLimit = 0;
-        for (var index = values.Length - 1; index > highestIndex; index--)
-        {
-            if (rightLimit < values[index])
-            {
-                rightLimit = values[index];
-            }
-            else
-            {
-                water += rightLimit - values[index];
-            }
-        }
-
-        return water;
+        return sum;
     }
 }
