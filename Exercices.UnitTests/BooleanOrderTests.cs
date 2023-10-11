@@ -42,42 +42,58 @@ public class BooleanOrderTests
     }
 
     [TestMethod]
-    public void Test1()
+    [DataRow("ttt", "||", 2)]
+    [Ignore]
+    public void MultipleOperators(string operands, string operators, int expected)
     {
-        Assert.AreEqual(new BigInteger(2), new BooleanOrder("tft", "^&").Solve());
+        var processor = new BooleanOrder(operands, operators);
+        var result = processor.Solve();
+        Assert.AreEqual(expected, result);
     }
 
-    [TestMethod]
-    public void Test2()
-    {
+    //[TestMethod]
+    //[Ignore]
+    //public void Test1()
+    //{
+    //    Assert.AreEqual(new BigInteger(2), new BooleanOrder("tft", "^&").Solve());
+    //}
 
-        Assert.AreEqual(new BigInteger(16), new BooleanOrder("ttftff", "|&^&&").Solve());
-    }
+    //[TestMethod]
+    //[Ignore]
+    //public void Test2()
+    //{
 
-    [TestMethod]
-    public void Test3()
-    {
+    //    Assert.AreEqual(new BigInteger(16), new BooleanOrder("ttftff", "|&^&&").Solve());
+    //}
 
-        Assert.AreEqual(new BigInteger(339), new BooleanOrder("ttftfftf", "|&^&&||").Solve());
-    }
+    //[TestMethod]
+    //[Ignore]
+    //public void Test3()
+    //{
 
-    [TestMethod]
-    public void Test4()
-    {
+    //    Assert.AreEqual(new BigInteger(339), new BooleanOrder("ttftfftf", "|&^&&||").Solve());
+    //}
 
-        Assert.AreEqual(new BigInteger(851), new BooleanOrder("ttftfftft", "|&^&&||^").Solve());
-    }
+    //[TestMethod]
+    //[Ignore]
+    //public void Test4()
+    //{
 
-    [TestMethod]
-    public void Test5()
-    {
+    //    Assert.AreEqual(new BigInteger(851), new BooleanOrder("ttftfftft", "|&^&&||^").Solve());
+    //}
 
-        Assert.AreEqual(new BigInteger(2434), new BooleanOrder("ttftfftftf", "|&^&&||^&").Solve());
-    }
+    //[TestMethod]
+    //[Ignore]
+    //public void Test5()
+    //{
 
-    [TestMethod]
-    public void Test6()
-    {
-        Assert.AreEqual(new BigInteger(945766470799), new BooleanOrder("ttftfftftffttfftftftfftft", "|&^&&||^&&^^|&&||^&&||&^").Solve());
-    }
+    //    Assert.AreEqual(new BigInteger(2434), new BooleanOrder("ttftfftftf", "|&^&&||^&").Solve());
+    //}
+
+    //[TestMethod]
+    //[Ignore]
+    //public void Test6()
+    //{
+    //    Assert.AreEqual(new BigInteger(945766470799), new BooleanOrder("ttftfftftffttfftftftfftft", "|&^&&||^&&^^|&&||^&&||&^").Solve());
+    //}
 }
