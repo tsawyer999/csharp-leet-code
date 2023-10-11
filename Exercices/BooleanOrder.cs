@@ -17,15 +17,18 @@ public class BooleanOrder
 
     public BigInteger Solve()
     {
-        var value1 = _operands[0] == 't';
-        var value2 = _operands[1] == 't';
         var result = 0;
-
-        Operation f = GetOperation(_operators[0]);
-
-        if (f(value1, value2))
+        for (var i = 0; i < _operands.Length - 1; i++)
         {
-            result++;
+            var value1 = _operands[i] == 't';
+            var value2 = _operands[i+1] == 't';
+
+            var f = GetOperation(_operators[i]);
+
+            if (f(value1, value2))
+            {
+                result++;
+            }
         }
 
         return result;
