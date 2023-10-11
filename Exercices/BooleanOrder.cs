@@ -31,10 +31,11 @@ public class BooleanOrder
         }
 
         var result = 0;
+
         for (var i = 0; i < _operands.Length - 1; i++)
         {
-            var value1 = _operands[i] == 't';
-            var value2 = _operands[i+1] == 't';
+            var value1 = ToBoolean(_operands[i]);
+            var value2 = ToBoolean(_operands[i + 1]);
 
             var f = GetOperation(_operators[i]);
 
@@ -63,6 +64,11 @@ public class BooleanOrder
         }
 
         return NotImplemented;
+    }
+
+    public bool ToBoolean(char value)
+    {
+        return value == 't';
     }
 
     public bool And(bool value1, bool value2)
