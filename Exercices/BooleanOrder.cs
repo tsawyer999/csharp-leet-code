@@ -17,6 +17,19 @@ public class BooleanOrder
 
     public BigInteger Solve()
     {
+        if (string.IsNullOrEmpty(_operands))
+        {
+            throw new Exception("operands not initialized");
+        }
+        if (string.IsNullOrEmpty(_operators))
+        {
+            throw new Exception("operators not initialized");
+        }
+        if (_operands.Length - _operators.Length != 1)
+        {
+            throw new Exception("wrong number of operators");
+        }
+
         var result = 0;
         for (var i = 0; i < _operands.Length - 1; i++)
         {
