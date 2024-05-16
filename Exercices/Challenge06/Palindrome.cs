@@ -9,19 +9,19 @@ public class Palindrome
 
         while (leftIndex < rightIndex)
         {
-            while (!((value[leftIndex] >= 65 && value[leftIndex] <= 90) || (value[leftIndex] >= 97 && value[leftIndex] <= 122)))
+            while (!IsAlpha(value[leftIndex]))
             {
                 leftIndex++;
             }
 
-            while (!((value[rightIndex] >= 65 && value[rightIndex] <= 90) || (value[rightIndex] >= 97 && value[rightIndex] <= 122)))
+            while (!IsAlpha(value[rightIndex]))
             {
                 rightIndex--;
             }
 
             if (value[leftIndex] != value[rightIndex])
             {
-                if (Math.Abs(value[leftIndex] - value[rightIndex]) != 32)
+                if (!IsSameChar(value[leftIndex], value[rightIndex]))
                 {
                     return false;
                 }
@@ -32,5 +32,36 @@ public class Palindrome
         }
 
         return true;
+    }
+
+    private bool IsAlpha(char c)
+    {
+        if (c < 65)
+        {
+            return false;
+        }
+
+        if (c <= 90)
+        {
+            return true;
+        }
+
+        if (c < 97)
+        {
+            return false;
+        }
+
+        if (c <= 122)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool IsSameChar(char l, char r)
+    {
+        var diff = l - r;
+        return diff is 32 or -32;
     }
 }
