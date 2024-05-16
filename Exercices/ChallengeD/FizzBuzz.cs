@@ -1,28 +1,21 @@
 ﻿namespace Exercices.ChallengeD
 {
-    public class FizzBuzz
+    public class FizzBuzz(int n)
     {
-        private int n;
-        private volatile int i;
-        private object padlock = new();
-
-        public FizzBuzz(int n)
-        {
-            this.n = n;
-            this.i = 1;
-        }
+        private volatile int _i = 1;
+        private readonly object _padlock = new();
 
         public void Fizz(Action printFizz)
         {
-            while (i <= n)
+            while (_i <= n)
             {
-                var ii = i;
-                lock (padlock)
+                var ii = _i;
+                lock (_padlock)
                 {
                     if (ii % 3 == 0 && ii % 5 != 0)
                     {
                         printFizz();
-                        i++;
+                        _i++;
                     }
                 }
             }
@@ -30,15 +23,15 @@
 
         public void Buzz(Action printBuzz)
         {
-            while (i <= n)
+            while (_i <= n)
             {
-                var ii = i;
-                lock (padlock)
+                var ii = _i;
+                lock (_padlock)
                 {
                     if (ii % 3 != 0 && ii % 5 == 0)
                     {
                         printBuzz();
-                        i++;
+                        _i++;
                     }
                 }
             }
@@ -46,15 +39,15 @@
 
         public void Fizzbuzz(Action printFizzBuzz)
         {
-            while (i <= n)
+            while (_i <= n)
             {
-                var ii = i;
-                lock (padlock)
+                var ii = _i;
+                lock (_padlock)
                 {
                     if (ii % 3 == 0 && ii % 5 == 0)
                     {
                         printFizzBuzz();
-                        i++;
+                        _i++;
                     }
                 }
             }
@@ -62,15 +55,15 @@
 
         public void Number(Action<int> printNumber)
         {
-            while (i <= n)
+            while (_i <= n)
             {
-                var ii = i;
-                lock (padlock)
+                var ii = _i;
+                lock (_padlock)
                 {
                     if (ii % 3 != 0 && ii % 5 != 0)
                     {
                         printNumber(ii);
-                        i++;
+                        _i++;
                     }
                 }
             }

@@ -1,46 +1,44 @@
-﻿namespace Exercices.ChallengeD
+﻿namespace Exercices.ChallengeD;
+
+public static class Program
 {
-    public static class Program
+    public static void Main()
     {
-        public static void Main()
+        var fizzBuzz = new FizzBuzz(15);
+
+        Task.WaitAll([
+            Task.Run(() =>
+            {
+                fizzBuzz.Fizz(CreateWriteAction("Fizz"));
+            }),
+            Task.Run(() =>
+            {
+                fizzBuzz.Buzz(CreateWriteAction("Buzz"));
+            }),
+            Task.Run(() =>
+            {
+                fizzBuzz.Fizzbuzz(CreateWriteAction("FizzBuzz"));
+            }),
+            Task.Run(() =>
+            {
+                fizzBuzz.Number(CreateWriteIntAction());
+            })
+        ]);
+    }
+
+    private static Action CreateWriteAction(string message)
+    {
+        return () =>
         {
-            Action printFizz = () =>
-            {
-                Console.WriteLine("Fizz");
-            };
-            Action printBuzz = () =>
-            {
-                Console.WriteLine("Buzz");
-            };
-            Action printFizzBuzz = () =>
-            {
-                Console.WriteLine("FizzBuzz");
-            };
-            Action<int> printNumber = (int value) =>
-            {
-                Console.WriteLine(value);
-            };
+            Console.WriteLine(message);
+        };
+    }
 
-            var fizzBuzz = new FizzBuzz(15);
-
-            Task.WaitAll([
-                Task.Run(() =>
-                {
-                    fizzBuzz.Fizz(printFizz);
-                }),
-                Task.Run(() =>
-                {
-                fizzBuzz.Buzz(printBuzz);
-                }),
-                Task.Run(() =>
-                {
-                fizzBuzz.Fizzbuzz(printFizzBuzz);
-                }),
-                Task.Run(() =>
-                {
-                fizzBuzz.Number(printNumber);
-                })
-            ]);
-        }
+    private static Action<int> CreateWriteIntAction()
+    {
+        return (int value) =>
+        {
+            Console.WriteLine(value);
+        };
     }
 }
