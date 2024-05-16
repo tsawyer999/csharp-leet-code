@@ -1,4 +1,4 @@
-namespace Exercices;
+namespace Exercices.Challenge03;
 
 public class TrapRainWater
 {

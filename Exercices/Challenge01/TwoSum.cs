@@ -1,4 +1,4 @@
-﻿namespace Exercices;
+﻿namespace Exercices.Challenge01;
 
 public class TwoSum
 {
@@ -8,7 +8,7 @@ public class TwoSum
         {
             return Array.Empty<int>();
         }
-            
+
         for (var i = 0; i < container.Length; i++)
         {
             for (var j = i + 1; j < container.Length; j++)
@@ -19,7 +19,7 @@ public class TwoSum
                 }
             }
         }
-            
+
         return Array.Empty<int>();
     }
 }

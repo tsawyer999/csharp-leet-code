@@ -1,4 +1,4 @@
-namespace Exercices.UnitTests;
+namespace Exercices.Challenge01;
 
 [TestClass]
 public class TwoSumTests
@@ -24,7 +24,7 @@ public class TwoSumTests
         var result = twoSum.FindSum(container, 70);
         Assert.AreEqual(Array.Empty<int>(), result);
     }
-        
+
     [TestMethod("Returns emty array if container contains less than two items")]
     [DataRow(new int[] { })]
     [DataRow(new[] { 7 })]

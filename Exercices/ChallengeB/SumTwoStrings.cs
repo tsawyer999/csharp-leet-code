@@ -1,4 +1,4 @@
-﻿namespace Exercices;
+﻿namespace Exercices.ChallengeB;
 
 public class SumTwoStrings
 {

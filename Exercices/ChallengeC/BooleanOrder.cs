@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace Exercices;
+namespace Exercices.ChallengeC;
 
 public class BooleanOrder
 {

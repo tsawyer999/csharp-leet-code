@@ -1,4 +1,4 @@
-﻿namespace Exercices.UnitTests;
+﻿namespace Exercices.Challenge02;
 
 [TestClass]
 public class ContainerWithMostWaterTests
@@ -36,8 +36,8 @@ public class ContainerWithMostWaterTests
 
 
     [TestMethod]
-    [DataRow(new[] {7, 1, 2, 3, 9}, 35)]
-    [DataRow(new[] {6, 9, 3, 4, 5, 8}, 40)]
+    [DataRow(new[] { 7, 1, 2, 3, 9 }, 35)]
+    [DataRow(new[] { 6, 9, 3, 4, 5, 8 }, 40)]
     public void CalculateRandomArea(int[] values, int expectedArea)
     {
         var calculator = new ContainerWithMostWater();

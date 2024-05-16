@@ -1,4 +1,4 @@
-﻿namespace Exercices
+﻿namespace Exercices.Challenge10
 {
     public class BracketValidator
     {
@@ -39,7 +39,7 @@
                 }
             }
 
-            return (stack.Count == 0);
+            return stack.Count == 0;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Exercices.UnitTests;
+﻿namespace Exercices.ChallengeC;
 
 [TestClass]
 public class BooleanOrderTests

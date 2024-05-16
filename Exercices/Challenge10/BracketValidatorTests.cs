@@ -1,4 +1,4 @@
-﻿namespace Exercices.UnitTests
+﻿namespace Exercices.Challenge10
 {
     [TestClass]
     public class BracketValidatorTests

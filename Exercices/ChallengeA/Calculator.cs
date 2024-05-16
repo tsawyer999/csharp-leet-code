@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Exercices;
+namespace Exercices.ChallengeA;
 
 public class Calculator
 {

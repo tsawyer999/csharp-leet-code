@@ -1,4 +1,4 @@
-﻿namespace Exercices.UnitTests;
+﻿namespace Exercices.ChallengeB;
 
 [TestClass]
 public class SumTwoStringsTests
@@ -42,7 +42,7 @@ public class SumTwoStringsTests
 
         Assert.AreEqual("3", sum);
     }
-    
+
     [TestMethod]
     public void SumTwoNumbersWithARetainer()
     {

@@ -1,4 +1,4 @@
-﻿namespace Exercices;
+﻿namespace Exercices.Challenge02;
 
 public class ContainerWithMostWater
 {

@@ -1,4 +1,4 @@
-﻿namespace Exercices.UnitTests;
+﻿namespace Exercices.ChallengeA;
 
 [TestClass]
 public class CalculatorTests
