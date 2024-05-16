@@ -21,6 +21,7 @@ public class LonguestSubstringTests
     [DataRow("abc", 3)]
     [DataRow("abcc", 3)]
     [DataRow("abccmnopqr", 6)]
+    [DataRow("abccmnopppqraabcdefghijaaaaaab", 10)]
     public void ReturnSubstringLength(string value, int expectedLength)
     {
         var processor = new LonguestSubstring();
