@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-namespace Exercices.UnitTests;
+﻿namespace Exercices.UnitTests;
 
 [TestClass]
 public class BooleanOrderTests
