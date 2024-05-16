@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 
-namespace Exercices.Challenge04;
+namespace Exercices.Challenge05;
 
 [TestClass]
 public class LonguestSubstringTests

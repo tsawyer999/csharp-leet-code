@@ -1,4 +1,4 @@
-﻿namespace Exercices.Challenge04
+﻿namespace Exercices.Challenge05
 {
     public class LonguestSubstring
     {
