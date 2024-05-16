@@ -7,17 +7,5 @@
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=76d28381_002D69c6_002D4da5_002Dbff7_002Dba705778c97c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CalculatorTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.CalculatorTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.TrapRainWaterTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.TwoSumTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.Tests.A&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.Tests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.SumTwoStringsTests.SumTwoNumbersWithSameLength&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.SumTwoStringsTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.ContainerWithMostWaterTests.ReturnSum&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.ContainerWithMostWaterTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.BooleanOrderTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::321F1DBB-813C-4621-938F-05FE5859013E::net7.0::Exercices.UnitTests.BracketValidatorTests&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Project Location="C:\src\Training\Faang\Exercices" Presentation="&amp;lt;Exercices&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

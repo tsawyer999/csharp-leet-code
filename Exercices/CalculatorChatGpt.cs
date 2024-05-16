@@ -1,35 +1,35 @@
-﻿namespace Exercices;
+﻿namespace Exercices.UnitTests;
 
 public class CalculatorChatGpt
 {
     public static int Add(string values)
     {
-        if (String.IsNullOrWhiteSpace(values))
+        if (string.IsNullOrWhiteSpace(values))
         {
             return 0;
         }
 
-        List<int> negatives = new List<int>();
-        int sum = 0;
-        string[] delimiters = new string[] { ",", "\n" };
+        var negatives = new List<int>();
+        var sum = 0;
+        var delimiters = new[] { ",", "\n" };
 
         if (values.StartsWith("//"))
         {
-            int delimiterEndIndex = values.IndexOf("#");
-            string delimiterString = values.Substring(2, delimiterEndIndex - 2);
+            var delimiterEndIndex = values.IndexOf("#");
+            var delimiterString = values.Substring(2, delimiterEndIndex - 2);
             delimiters = delimiterString
-                .Split(new string[] { "[", "]" }, StringSplitOptions.RemoveEmptyEntries)
+                .Split(["[", "]"], StringSplitOptions.RemoveEmptyEntries)
                 .Select(s => s.Trim())
                 .ToArray();
 
             values = values.Substring(delimiterEndIndex + 1);
         }
 
-        string[] numbers = values.Split(delimiters, StringSplitOptions.None);
+        var numbers = values.Split(delimiters, StringSplitOptions.None);
 
-        foreach (string num in numbers)
+        foreach (var num in numbers)
         {
-            int value = Int32.Parse(num);
+            var value = int.Parse(num);
             if (value < 0)
             {
                 negatives.Add(value);
@@ -42,8 +42,8 @@ public class CalculatorChatGpt
 
         if (negatives.Count > 0)
         {
-            string message = "Negatives not allowed ";
-            message += String.Join(",", negatives.ToArray());
+            var message = "Negatives not allowed ";
+            message += string.Join(",", negatives.ToArray());
             throw new Exception(message);
         }
 
