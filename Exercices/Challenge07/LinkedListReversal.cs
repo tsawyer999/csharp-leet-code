@@ -2,7 +2,7 @@
 
 public class LinkedListReversal
 {
-    public Node? SubReverseList(Node root)
+    public Node? ReverseList(Node root)
     {
         var previousNode = null as Node;
         var currentNode = root;
@@ -19,18 +19,5 @@ public class LinkedListReversal
         }
 
         return previousNode;
-    }
-}
-
-public class Node(int value)
-{
-    public int Value { get; set; } = value;
-    public Node? NextNode { get; set; }
-
-    public override string ToString()
-    {
-        return NextNode != null
-            ? Value + NextNode.ToString()
-            : Value.ToString();
     }
 }

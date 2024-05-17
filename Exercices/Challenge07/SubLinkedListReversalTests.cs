@@ -1,23 +1,23 @@
 ﻿namespace Exercices.Challenge07;
 
 [TestClass]
-public class LinkedListReversalTests
+public class SubLinkedListReversalTests
 {
     [TestMethod]
     public void Return()
     {
         var firstNode = new Node(1);
         var node = firstNode;
-        for (var i = 2; i <= 5; i++)
+        for (var i = 2; i <= 7; i++)
         {
             node.NextNode = new Node(i);
             node = node.NextNode;
         }
 
-        var processor = new LinkedListReversal();
+        var processor = new SubLinkedListReversal();
 
-        var result = processor.ReverseList(firstNode);
+        var result = processor.SubReverseList(firstNode, 3, 5);
 
-        Assert.AreEqual("54321", result?.ToString());
+        Assert.AreEqual("1254367", result?.ToString());
     }
 }
