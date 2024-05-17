@@ -21,7 +21,7 @@ public class SubLinkedListReversalTests
 
         var result = processor.SubReverseList(firstNode, leftIndex, rightIndex);
 
-        Assert.AreEqual(expectedResult, result.ToString());
+        Assert.AreEqual(expectedResult, result?.ToString());
     }
 
     [TestMethod]
@@ -40,7 +40,7 @@ public class SubLinkedListReversalTests
 
         var result = processor.SubReverseList(firstNode, 30, 50);
 
-        Assert.AreEqual("1234567", result.ToString());
+        Assert.AreEqual("1234567", result?.ToString());
     }
 
     [TestMethod]
@@ -60,7 +60,7 @@ public class SubLinkedListReversalTests
 
         var result = processor.SubReverseList(firstNode, leftIndex, rightIndex);
 
-        Assert.AreEqual(expectedResult, result.ToString());
+        Assert.AreEqual(expectedResult, result?.ToString());
     }
 
     [TestMethod]
@@ -79,6 +79,6 @@ public class SubLinkedListReversalTests
 
         var result = processor.SubReverseList(firstNode, 0, 1);
 
-        Assert.AreEqual("1234567", result.ToString());
+        Assert.AreEqual("1234567", result?.ToString());
     }
 }
