@@ -8,4 +8,9 @@
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=76d28381_002D69c6_002D4da5_002Dbff7_002Dba705778c97c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CalculatorTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="C:\src\Training\Faang\Exercices" Presentation="&amp;lt;Exercices&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fc8826fa_002D50d3_002D4e47_002D9b6e_002D178d8b483a07/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Return" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::582B72F9-1201-48A6-A710-518BAEA4116D::net8.0::Exercices.Challenge07.LinkedListReversalTests.Return&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
