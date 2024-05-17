@@ -4,6 +4,11 @@ public class SubLinkedListReversal
 {
     public Node SubReverseList(Node rootNode, int leftIndex, int rightIndex)
     {
+        if (rightIndex < 2)
+        {
+            return rootNode;
+        }
+
         Node? previousNode = null;
         var currentNode = rootNode;
         Node? nextNode = null;
@@ -16,7 +21,7 @@ public class SubLinkedListReversal
                 return rootNode;
             }
             previousNode = currentNode;
-            currentNode = currentNode?.NextNode;
+            currentNode = currentNode.NextNode;
             i++;
         }
 
@@ -41,14 +46,25 @@ public class SubLinkedListReversal
             i++;
         }
 
+        if (headSubList != null && tailSubList == null)
+        {
+            headSubList.NextNode = nextNode;
+            return previousNode;
+        }
+
         if (tailSubList == null)
         {
             return previousNode;
         }
 
-        tailSubList.NextNode = previousNode;
-        headSubList.NextNode = nextNode;
+        if (tailSubList != null && headSubList != null)
+        {
+            tailSubList.NextNode = previousNode;
+            headSubList.NextNode = nextNode;
 
-        return rootNode;
+            return rootNode;
+        }
+
+        return new Node(0);
     }
 }
