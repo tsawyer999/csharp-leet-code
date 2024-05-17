@@ -1,6 +1,4 @@
-﻿using Exercices.Challenge05;
-
-namespace Exercices.Challenge06;
+﻿namespace Exercices.Challenge06;
 
 public class AlmostPalindrome
 {
