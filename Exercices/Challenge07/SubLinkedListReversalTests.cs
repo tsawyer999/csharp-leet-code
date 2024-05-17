@@ -44,8 +44,9 @@ public class SubLinkedListReversalTests
     }
 
     [TestMethod]
-    [Description("1234567 -> 7654321")]
-    public void ReturnWholeReversedListWhenIndexesAreLargerThenList()
+    [DataRow(1, 50, "7654321")]
+    [DataRow(4, 50, "1237654")]
+    public void ReturnWholeReversedListWhenIndexesAreLargerThenList(int leftIndex, int rightIndex, string expectedResult)
     {
         var firstNode = new Node(1);
         var node = firstNode;
@@ -57,9 +58,9 @@ public class SubLinkedListReversalTests
 
         var processor = new SubLinkedListReversal();
 
-        var result = processor.SubReverseList(firstNode, 1, 50);
+        var result = processor.SubReverseList(firstNode, leftIndex, rightIndex);
 
-        Assert.AreEqual("7654321", result.ToString());
+        Assert.AreEqual(expectedResult, result.ToString());
     }
 
     [TestMethod]
