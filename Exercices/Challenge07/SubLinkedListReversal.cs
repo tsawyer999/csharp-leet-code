@@ -46,25 +46,15 @@ public class SubLinkedListReversal
             i++;
         }
 
-        if (headSubList != null && tailSubList == null)
-        {
-            headSubList.NextNode = nextNode;
-            return previousNode;
-        }
-
         if (tailSubList == null)
         {
+            headSubList.NextNode = nextNode;
             return previousNode;
         }
 
-        if (tailSubList != null && headSubList != null)
-        {
-            tailSubList.NextNode = previousNode;
-            headSubList.NextNode = nextNode;
+        tailSubList.NextNode = previousNode;
+        headSubList.NextNode = nextNode;
 
-            return rootNode;
-        }
-
-        return new Node(0);
+        return rootNode;
     }
 }
