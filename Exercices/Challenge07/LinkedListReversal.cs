@@ -5,15 +5,17 @@ public class LinkedListReversal
     public Node? SubReverseList(Node root)
     {
         var previousNode = null as Node;
-        var node = root;
+        var currentNode = root;
         Node? nextNode;
 
-        while (node != null)
+        while (currentNode != null)
         {
-            nextNode = node.NextNode;
-            node.NextNode = previousNode;
-            previousNode = node;
-            node = nextNode;
+            nextNode = currentNode.NextNode;
+
+            currentNode.NextNode = previousNode;
+
+            previousNode = currentNode;
+            currentNode = nextNode;
         }
 
         return previousNode;
